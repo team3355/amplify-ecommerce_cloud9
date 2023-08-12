@@ -4,6 +4,7 @@
 npm install react-router-dom@5
 
 **graphql error 해결**
+
 rm -rf node_modules package-lock.json \
 npm install \
 npm audit fix --force
