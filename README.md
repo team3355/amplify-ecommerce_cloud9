@@ -1,7 +1,11 @@
 ### install
 **react-router-dom@5 설치**
 
-npm install react-router-dom@5
+npm install aws-amplify@1.2.4 \
+npm install aws-amplify-react@^2.5.4 \
+npm install --save semantic-ui-react \
+npm install --save react-slick react-dom react-router-dom@5 \
+npm install --save slick-carousel styled-components
 
 **graphql error 해결**
 
