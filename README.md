@@ -1,13 +1,15 @@
-### install
-**react-router-dom@5 설치**
-
+### install (필수)
 npm install aws-amplify@1.2.4 \
 npm install aws-amplify-react@^2.5.4 \
 npm install --save semantic-ui-react \
 npm install --save react-slick react-dom react-router-dom@5 \
 npm install --save slick-carousel styled-components
 
-**graphql error 해결**
+### backend 작업 aws-exports.js 파일 설치 (필수)
+
+amplify pull --appId d3rddtvvaec14m --envName master
+
+### graphql error 해결
 
 rm -rf node_modules package-lock.json \
 npm install \
