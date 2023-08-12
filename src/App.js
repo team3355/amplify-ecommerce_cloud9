@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Header } from 'semantic-ui-react'
+import { withAuthenticator } from 'aws-amplify-react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import signUpConfig from './config/signUpConfig'
+
+import InitState from './pages/InitState'
+import TopMenu from './components/TopMenu'
+import Carousel from './components/Carousel'
+import ItemTable from './components/ItemTable'
+
+import './App.css'
+
+class App extends React.Component {
+    constructor(props, context) {
+      super(props, context);
+    }
+  
+    render() {
+        if (this.props.authState == "signedIn") {
+            return functionApp();
+        } else {
+            return null;
+        }
+    }
+  }
+  
+function functionApp() {
+    return (
+        <div style={styles}>
+            <InitState/>
+            <TopMenu />
+            <Container text style={{ marginBottom: '1em' }}>
+                <Header as='h1' style={{ textAlign: 'center' }}>All things Alexa</Header>
+            </Container>
+            <Container fluid>
+                <Carousel />
+            </Container>
+            <Container style={{ marginTop: '2em' }}>
+                <Header as='h2'>Smart displays</Header>
+                <p>Everything you love about Alexa, and now she can show you things. Get the weather forecast, watch the news, and see lyrics with Amazon Music.</p>
+            </Container>
+            <Container style={{ marginTop: '2em' }}>
+                <ItemTable type='echo' />
+            </Container>
+            <Container style={{ marginTop: '2em' }}>
+                <Header as='h2'>Echo companions</Header>
+                <p>Enjoy richer, more dynamic music with devices designed to work with Echo smart speakers or your existing sound system.</p>
+            </Container>
+            <Container style={{ marginTop: '2em' }}>
+                <ItemTable type='companion' />
+            </Container>
+        </div>
+    );
 }
 
-export default App;
+export default withAuthenticator(App, { signUpConfig })
+
+const styles = {
+    marginLeft: '1em',
+    marginRight: '1em'
+}
