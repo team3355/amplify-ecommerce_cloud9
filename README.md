@@ -9,6 +9,10 @@ npm install --save slick-carousel styled-components
 
 amplify pull --appId d3rddtvvaec14m --envName master
 
+### bash: amplify: command not found 해결
+
+npm install -g @aws-amplify/cli
+
 ### graphql error 해결
 
 rm -rf node_modules package-lock.json \
