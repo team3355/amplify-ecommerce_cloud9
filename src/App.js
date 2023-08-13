@@ -1,11 +1,13 @@
 import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
 import { withAuthenticator } from 'aws-amplify-react'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import signUpConfig from './config/signUpConfig'
 
 import InitState from './pages/InitState'
 import TopMenu from './components/TopMenu'
+import BottomMenu from './components/BottomMenu';
 import Carousel from './components/Carousel'
 import ItemTable from './components/ItemTable'
 
@@ -27,9 +29,19 @@ class App extends React.Component {
   
 function functionApp() {
     return (
+
         <div style={styles}>
-            <InitState/>
+            <InitState />
             <TopMenu />
+            <BottomMenu />
+            <AppContent />
+        </div>
+    );
+}
+
+function AppContent() {
+    return (
+        <>
             <Container text style={{ marginBottom: '1em' }}>
                 <Header as='h1' style={{ textAlign: 'center' }}>All things Alexa</Header>
             </Container>
@@ -43,16 +55,10 @@ function functionApp() {
             <Container style={{ marginTop: '2em' }}>
                 <ItemTable type='echo' />
             </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <Header as='h2'>Echo companions</Header>
-                <p>Enjoy richer, more dynamic music with devices designed to work with Echo smart speakers or your existing sound system.</p>
-            </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <ItemTable type='companion' />
-            </Container>
-        </div>
+        </>
     );
 }
+
 
 export default withAuthenticator(App, { signUpConfig })
 

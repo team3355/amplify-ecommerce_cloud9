@@ -13,6 +13,8 @@ import App from './App';
 import Product from './pages/Product'
 import Checkout from './pages/Checkout'
 import PlacedOrder from './pages/PlacedOrder'
+import Transcribe from './pages/Transcribe'
+import Reko from './pages/Reko'
 
 import awsconfig from './aws-exports'
 Amplify.configure(awsconfig)
@@ -25,6 +27,8 @@ const routing = (
                 <Route path="/product/:id" component={Product} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/ordercomplete" component={PlacedOrder}/>
+                <Route path="/transcribe" component={Transcribe} />
+                <Route path="/reko" component={Reko} />
                 <Route component={App} />
             </Switch>
         </Router>
