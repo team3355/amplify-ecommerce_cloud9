@@ -1,3 +1,25 @@
+### install (필수)
+npm install aws-amplify@1.2.4 \
+npm install aws-amplify-react@^2.5.4 \
+npm install --save semantic-ui-react \
+npm install --save react-slick react-dom react-router-dom@5 \
+npm install --save slick-carousel styled-components
+
+### backend 작업 aws-exports.js 파일 설치 (필수)
+
+amplify pull --appId d3rddtvvaec14m --envName master
+
+### bash: amplify: command not found 해결
+
+npm install -g @aws-amplify/cli
+
+### graphql error 해결
+
+rm -rf node_modules package-lock.json \
+npm install \
+npm audit fix --force
+
+--- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
