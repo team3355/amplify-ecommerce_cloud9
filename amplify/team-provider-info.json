@@ -16,17 +16,25 @@
       "auth": {
         "EcommerceAuth": {}
       },
-      "storage": {
-        "dynamodbitems": {}
-      },
       "function": {
         "AmplifyWorkshopLambdaItems": {
           "deploymentBucketName": "amplify-amplifyecommerce-master-64657-deployment",
           "s3Key": "amplify-builds/AmplifyWorkshopLambdaItems-665175324b6464384875-build.zip"
+        },
+        "amplifyecommerce1c887fc8": {
+          "deploymentBucketName": "amplify-amplifyecommerce-master-64657-deployment",
+          "s3Key": "amplify-builds/amplifyecommerce1c887fc8-564a4d7537576d52446d-build.zip"
         }
+      },
+      "storage": {
+        "dynamo248775f3": {},
+        "dynamodbitems": {}
       },
       "api": {
         "amplifyworkshopapi": {}
+      },
+      "predictions": {
+        "transcriptionffffd50a": {}
       }
     }
   }

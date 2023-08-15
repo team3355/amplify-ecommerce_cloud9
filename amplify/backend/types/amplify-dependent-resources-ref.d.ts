@@ -27,6 +27,12 @@ export type AmplifyDependentResourcesAttributes = {
       "Region": "string"
     }
   },
+  "predictions": {
+    "transcriptionffffd50a": {
+      "language": "string",
+      "region": "string"
+    }
+  },
   "storage": {
     "dynamodbitems": {
       "Arn": "string",

@@ -79,6 +79,29 @@
           "resourceName": "AmplifyWorkshopLambdaItems"
         }
       ]
+    },
+    "AMPLIFY_function_amplifyecommerce1c887fc8_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyecommerce1c887fc8"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifyecommerce1c887fc8_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyecommerce1c887fc8"
+        }
+      ]
+    }
+  },
+  "predictions": {
+    "transcriptionffffd50a": {
+      "convertType": "transcription",
+      "providerPlugin": "awscloudformation",
+      "service": "Transcribe"
     }
   },
   "storage": {
