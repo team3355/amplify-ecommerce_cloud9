@@ -7,7 +7,9 @@ npm install --save slick-carousel styled-components
 
 ### backend 작업 aws-exports.js 파일 설치 (필수)
 
-amplify pull --appId d3rddtvvaec14m --envName master
+amplify pull --appId d3rddtvvaec14m --envName master\
+코드에 뜬 링크 열고 로그인 후 Copy CLI login key 복사 붙여넣기\
+modify -> Yes
 
 ### bash: amplify: command not found 해결
 
